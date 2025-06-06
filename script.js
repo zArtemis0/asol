@@ -7,22 +7,25 @@ function makeGuess() {
   const result = document.getElementById("result");
 
   if (!/^[01]{16}$/.test(guess)) {
-    result.textContent = "❌ Please enter a valid 16-bit binary number.";
+    result.textContent = "are you slow?";
     return;
   }
 
   if (guess === targetBinary) {
-    result.textContent = "✅ Teleporting...";
+    result.textContent = "finally you dumbass";
     setTimeout(() => {
-      // Replace this with your actual Google Doc link
-      window.location.href = "https://docs.google.com/document/d/163XZiFtZR2AO9ANo-Pu4eREjPZqdM9V8XCFd7x9Pruo/edit?tab=t.0";
+      // Replace with your Google Doc link
+      window.location.href = "https://docs.google.com/document/d/your-doc-id-here";
     }, 1000);
   } else {
-    result.textContent = "❌ Incorrect. Try again.";
+    result.textContent = "stupid";
   }
 }
 
-// Add Enter key support
+// Run makeGuess on button click
+document.getElementById("guessBtn").addEventListener("click", makeGuess);
+
+// Run makeGuess when Enter is pressed inside the input
 document.getElementById("guess").addEventListener("keydown", function(event) {
   if (event.key === "Enter") {
     makeGuess();
