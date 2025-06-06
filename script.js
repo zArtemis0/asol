@@ -15,7 +15,7 @@ function makeGuess() {
     result.textContent = "✅ Teleporting...";
     setTimeout(() => {
       // Replace this with your actual Google Doc link
-      window.location.href = "https://docs.google.com/document/d/your-doc-id-here";
+      window.location.href = "https://docs.google.com/document/d/163XZiFtZR2AO9ANo-Pu4eREjPZqdM9V8XCFd7x9Pruo/view?tab=t.0";
     }, 1000);
   } else {
     result.textContent = "❌ Incorrect. Try again.";
