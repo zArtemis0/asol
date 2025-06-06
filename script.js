@@ -15,9 +15,16 @@ function makeGuess() {
     result.textContent = "✅ Teleporting...";
     setTimeout(() => {
       // Replace this with your actual Google Doc link
-      window.location.href = "https://docs.google.com/document/d/163XZiFtZR2AO9ANo-Pu4eREjPZqdM9V8XCFd7x9Pruo/view?tab=t.0";
+      window.location.href = "https://docs.google.com/document/d/163XZiFtZR2AO9ANo-Pu4eREjPZqdM9V8XCFd7x9Pruo/edit?tab=t.0";
     }, 1000);
   } else {
     result.textContent = "❌ Incorrect. Try again.";
   }
 }
+
+// Add Enter key support
+document.getElementById("guess").addEventListener("keydown", function(event) {
+  if (event.key === "Enter") {
+    makeGuess();
+  }
+});
