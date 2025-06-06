@@ -1,4 +1,3 @@
-// Generate a random 16-bit number
 const targetNumber = Math.floor(Math.random() * 65536);
 const targetBinary = targetNumber.toString(2).padStart(16, '0');
 
@@ -7,27 +6,27 @@ function makeGuess() {
   const result = document.getElementById("result");
 
   if (!/^[01]{16}$/.test(guess)) {
-    result.textContent = "are you slow?";
+    result.textContent = "by any chance are you autistic?";
     return;
   }
 
   if (guess === targetBinary) {
-    result.textContent = "finally you dumbass";
+    result.textContent = "took you long enough dumbass";
     setTimeout(() => {
-      // Replace with your Google Doc link
-      window.location.href = "https://docs.google.com/document/d/your-doc-id-here";
+      window.location.href = "https://docs.google.com/document/d/163XZiFtZR2AO9ANo-Pu4eREjPZqdM9V8XCFd7x9Pruo/edit?tab=t.0";
     }, 1000);
   } else {
     result.textContent = "stupid";
   }
 }
 
-// Run makeGuess on button click
+// Trigger guess when button is clicked
 document.getElementById("guessBtn").addEventListener("click", makeGuess);
 
-// Run makeGuess when Enter is pressed inside the input
-document.getElementById("guess").addEventListener("keydown", function(event) {
+// Trigger guess when Enter is pressed
+document.addEventListener("keydown", function(event) {
   if (event.key === "Enter") {
     makeGuess();
   }
 });
+
